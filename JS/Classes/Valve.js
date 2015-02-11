@@ -132,7 +132,7 @@ function Valve() {
 		};
 		
 		//if the profile is active, we will set it inactive
-		if (profiles[profile].active){
+		if (profiles[profile.id].active){
 			BrewTroller.communicate(BrewTroller.getAddress() + setProfileStatus + '&' + profiles[profile].bitMask + '&0', callback, profiles);
 		}
 		else{	//else if it is idle we will activate it
